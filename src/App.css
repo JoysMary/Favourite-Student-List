@@ -1,0 +1,278 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:Ariel,sans-serif;
+  background:#f4f7fb;
+  color:#1e293b;
+}
+
+/*Navbar*/
+.navbar{
+  height:70px;
+  background:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 7%;
+  box-shadow:0 3px 15px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+  gap:5px;
+  z-index:100;
+}
+.logo{
+  text-decoration: none;
+  color: #4f46e5;
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links{
+  display: flex;
+  gap:30px;
+}
+.nav-links a{
+  text-decoration:none;
+  color: #475569;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.nav-links a:hover{
+  color: #4f46e5;
+}
+.fav-link{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.count{
+  background-color: #4fa6e5;
+  color: white;
+  border-radius: 50%;
+  min-width:24px;
+  height:24px;
+  display:flex;
+  align-content:center;
+  font-size:12px;
+}
+
+/*page*/
+.page{
+  width:86%;
+  max-width:1200px;
+  margin:auto;
+  padding:20px 0;
+}
+
+/*Hero*/
+.hero{
+  background: #4f46e5;
+  color:white;
+  padding:35px;
+  border-radius: 20px;
+
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.hero h1{
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.hero p{
+  opacity:0.9;}
+
+
+  /*Search*/
+  .serach-box{
+    background:white;
+    color: #64748b;
+    height: 100px;
+    padding:12px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-sizing:border-box;
+    
+  }
+  .search-box input{
+    border:none;
+    outline:none;
+    width:100%;
+    font-size: 15px;
+  }
+
+  /* student grid*/
+.student-grid{
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit, minmax(280px, 1fr)
+  );
+  gap:25px;
+  margin-top: 40px;
+}
+
+/*Student card*/
+.student-card{
+  background-color: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.student-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 12px 30px rgba(79,70,229,0.18);
+}
+.student-icon{
+  width:65px;
+  height:65px;
+  border-radius: 50px;
+  background-color: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6
+  );
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+.student.info h3{
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+.student.info p{
+  color: #64748b;
+  margin: 7px 0;
+}
+
+
+/*Buttons*/
+.favourite-btn,.remove-btn{
+  width:100%;
+  padding: 12px;
+  border:none;
+  border-radius: 10px;
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor:pointer;
+  transition: 0.3s;
+}
+.favourite-btn{
+  background: #4f46e5;
+  color: white;
+}
+.favourite-btn:hover{
+  background-color: #3730a3;
+  transform:scale(1.02);
+}
+.remove-btn{
+  background: #fee2e2;
+  color: #dc2626;
+}
+.remove-btn:hover{
+  background: #fecaca;
+}
+
+/*Page Heading*/
+.page-heading{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-heading h1{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.page-heading h1{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.page-heading p{
+  color: #64748b;;
+}
+
+/*Empty*/
+.empty-box{
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 70px 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+.empty-icon{
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+.empty-box h2{
+  margin-bottom:10px;
+}
+.empty-box p{
+  color:#64748b;
+  margin-bottom: 25px;
+}
+.browse-btn{
+  display: inline-block;
+  background:#4f46e5;
+  color: white;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.browse-btn:hover{
+  background:#3730a3;
+  transform: translateY(-2px);
+}
+.empty-search{
+  text-align: center;
+  padding: 50px;
+  font-size: 20px;
+  color: #64748b;
+}
+
+/*mobile*/
+@media(max-width:700px){
+  .navbar{
+    padding:0 5%;
+  }
+  .logo{
+    font-size: 19px;
+  }
+  .nav-links{
+    gap:12px;
+  }
+  .nav-links a{
+    font-size: 13px;
+  }
+
+  .hero{
+    flex-direction: column;
+    align-items: stretch;
+    gap:25px;
+  }
+  .her h1{
+    font-size: 26px;;
+  }
+  .hero h1{
+    font-size: 26px;
+  }
+  .search-box{
+    width:100%;
+  }
+  .page{
+    width:92%
+  }
+}
